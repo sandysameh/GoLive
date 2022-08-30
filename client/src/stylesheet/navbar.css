@@ -1,0 +1,49 @@
+.live-indicator {
+    width: 8px;
+    height: 8px;
+    width: 65%;
+    margin-top: 1.8vh;
+    float: left;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .live-indicator .red-dot, .live-indicator .pulse {
+    position: absolute;
+    height: 11px;
+    width: 11px;
+    border-radius: 18px;
+    background-color: #FF412B;
+  }
+  
+  .live-indicator .pulse {
+    animation-name: red-dot-scale-fade;
+    animation-iteration-count: infinite; 
+    animation-duration: 1.8s;
+  }
+  
+  .live-indicator .pulse.two {
+    animation-delay: 0.2s;
+  }
+  
+  
+  .navbar-collapse {
+    padding-left: 5vw;
+  }
+  @keyframes red-dot-scale-fade {
+    0% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0;
+      transform: scale(5);
+    }
+    
+    100% {
+      opacity: 0;
+      transform: scale(5);
+    }
+  }
